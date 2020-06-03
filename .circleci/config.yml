@@ -53,12 +53,12 @@ jobs:
 workflows:
     build-and-test:
       jobs:
-        - client-build-and-test
+        - client-build-and-test:
           filters:
             branches:
               only:
                 - master
-        - server-build-and-test
+        - server-build-and-test:
           filters:
             branches:
               only:
