@@ -25,9 +25,6 @@ jobs:
           name: Running client tests
           command: npm test 
           working_directory: ./client
-      - run:
-          name: Install Docker client
-          command: apk add docker-cli
       - run: 
           name: Docker publish
           command: |
