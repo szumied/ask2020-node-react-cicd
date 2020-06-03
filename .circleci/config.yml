@@ -9,11 +9,11 @@ jobs:
       - checkout
       - node/install-packages:
           app-dir: ./server
+      - node/install-packages:
+          app-dir: ./client
       - run:
           command: npm install
           working_directory: ./server
-      - node/install-packages:
-          app-dir: ./client
       - run:
           command: npm install
           wokring_directory: ./client
