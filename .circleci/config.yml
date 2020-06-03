@@ -54,7 +54,15 @@ workflows:
     build-and-test:
       jobs:
         - client-build-and-test
+          filters:
+            branches:
+              only:
+                - master
         - server-build-and-test
+          filters:
+            branches:
+              only:
+                - master
         - publish-docker:
             requires:
               - client-build-and-test
